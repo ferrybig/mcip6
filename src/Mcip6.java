@@ -23,6 +23,7 @@ public class Mcip6 {
         try {
             InetAddress.getByName("::1").isReachable(1);
         } catch (IOException ex) {
+            ex.printStackTrace();
         }
         Class.forName("net.minecraft.client.main.Main").getDeclaredMethod("main", args.getClass()).invoke(null, (Object) args);
     }
